@@ -1,7 +1,7 @@
 <template>
 
-<ScoreCounter name="Player1" />
-<ScoreCounter name="Player2" />
+<ScoreCounter name="Smitty Werbenjagermanjensen" number="1"/>
+<ScoreCounter name="Mr. Krabs"  number="2"/>
 
 </template>
 

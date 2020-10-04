@@ -1,9 +1,9 @@
 <template>
     <div>
-    <h2>{{name}}</h2>
+    <h2>{{name}} #{{number}}</h2>
     <p>{{player.score}}</p>  <!-- Double handle bars allow you to access exported values created in the script (below). -->
-    <button @click="player.score--">Decrease</button>
-    <button @click="player.score++">Increase</button> 
+    <button @click="decrease">Decrease</button>
+    <button @click="increase">Increase</button> 
   </div>
 </template>
 
@@ -15,10 +15,18 @@ import { reactive } from 'vue';
 export default{
     props: {
         name: String,
+        number: Number,
     },
     inheritAttrs: false,
 }
 
+export const increase = () => {
+  player.score += 1;
+}
+
+export const decrease = () => {
+  player.score -= 1;
+}
 
 export const player = reactive({    // Reactive tells html the variable is going to change and needs to be updated when it does.
   score: 0
