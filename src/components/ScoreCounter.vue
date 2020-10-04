@@ -20,12 +20,12 @@ export default{
     inheritAttrs: false,
 }
 
-export const increase = () => {
-  player.score += 1;
+export const decrease = () => {   // () creates an anon function
+  player.score -= 1;
 }
 
-export const decrease = () => {
-  player.score -= 1;
+export const increase = () => {  
+  player.score += 1;
 }
 
 export const player = reactive({    // Reactive tells html the variable is going to change and needs to be updated when it does.
